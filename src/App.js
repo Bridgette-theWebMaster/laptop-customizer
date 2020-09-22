@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import Order from "./Order";
-import ProductTable from "./ProductTable";
+import Order from "./Components/Order";
+import Form from "./Components/Form";
 import "./App.css";
 
 class App extends Component {
@@ -49,7 +49,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <ProductTable
+          <Form
             features={this.props.features}
             USCurrencyFormat={this.USCurrencyFormat}
             updateFeature={this.updateFeature}
