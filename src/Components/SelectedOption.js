@@ -1,5 +1,6 @@
 import React from "react";
 import slugify from "slugify";
+import USCurrency from "./USCurrency";
 
 export default function SelectedOption(props) {
   const feature = props.features;
@@ -9,7 +10,7 @@ export default function SelectedOption(props) {
 
     return (
       <div key={itemHash} className="feature__item">
-        <SelectedOption
+        <input
           type="radio"
           id={itemHash}
           className="feature__option"
@@ -18,7 +19,10 @@ export default function SelectedOption(props) {
           onChange={(e) => props.update(name, item)}
         />
         <label htmlFor={itemHash} className="feature__label">
-          {item.name} ({props.USCurrencyFormat.format(item.cost)})
+          {item.name}
+          <div>
+            <USCurrency cost={item.cost} />
+          </div>
         </label>
       </div>
     );

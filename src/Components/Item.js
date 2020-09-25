@@ -14,6 +14,7 @@ export default function Item(props) {
           name={feature}
           selected={props.selected}
           update={props.update}
+          USCurrencyFormat={props.USCurrencyFormat}
         />
       </fieldset>
     );

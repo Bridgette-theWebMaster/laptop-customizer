@@ -56,7 +56,7 @@ class App extends Component {
           <Form
             features={this.props.features}
             USCurrencyFormat={this.USCurrencyFormat}
-            updateFeature={this.updateFeature}
+            update={this.updateFeature}
             selected={this.state.selected}
           />
           <Order
